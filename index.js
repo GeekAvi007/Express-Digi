@@ -58,7 +58,7 @@ app.put('/bikes:id', (req, res) => {
     res.send(200).send(bike)
 })
 
-app.delete('/tea/:id', (req, res)=>{
+app.delete('/bikes/:id', (req, res)=>{
     const index = bikeData.findIndex(b => b.id === parseInt(req.params.id))
     if(index === -1){
         return res.send('Bike Not Found').status(404)
